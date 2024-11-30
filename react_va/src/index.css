@@ -1,0 +1,41 @@
+#root {
+    width: 75%;
+    margin: 0 auto;
+}
+
+form {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+input,
+button {
+    margin-left: 0.5em;
+}
+
+#loading {
+    padding: 5em;
+}
+
+.item {
+    margin: 1em 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5em;
+
+}
+
+.item-image {
+    width: 200px;
+    height: 150px;
+    background: hsl(212, 21%, 14%);
+    flex-shrink: 0;
+    
+}
+
+.item-image img {
+    height: 100%;
+    max-width: 200px;
+    display: block;
+    margin: auto;
+}
