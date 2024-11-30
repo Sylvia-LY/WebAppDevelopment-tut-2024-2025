@@ -1,0 +1,46 @@
+### post
+POST http://localhost:3000/express_api
+content-type: application/x-www-form-urlencoded
+
+oid=12345678X&name=testname&comment=hello%20comment
+
+### post wrong format param
+POST http://localhost:3000/express_api
+content-type: application/x-www-form-urlencoded
+
+oid=12345678-XXX&name=name2&comment=hello%20comment
+
+
+### post wrong size param
+POST http://localhost:3000/express_api
+content-type: application/x-www-form-urlencoded
+
+oid=12345678Xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&name=%23name2&comment=hello%20comment
+
+### post missing param
+POST http://localhost:3000/express_api
+content-type: application/x-www-form-urlencoded
+
+oid=12345678X&comment=hello%20comment
+
+
+### get
+GET http://localhost:3000/express_api?oid=12345678X
+
+
+### get oid with no comments
+GET http://localhost:3000/express_api?oid=NONE
+
+
+### get missing param
+GET http://localhost:3000/express_api?xxx=4
+
+
+
+### get wrong param format
+GET http://localhost:3000/express_api?oid=abc-999
+
+
+### get wrong param length
+GET http://localhost:3000/express_api?oid=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
